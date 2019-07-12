@@ -29,4 +29,8 @@ public class Sudoku {
 		return n * n;
 	}
 	
+	public int getTotalCuadrados() {
+		return 1;
+	}
+	
 }

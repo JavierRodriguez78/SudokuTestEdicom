@@ -71,6 +71,15 @@ public class SudokuTEst {
 			int[] fila = sudoku.getFila(0);
 			assertArrayEquals(new int[] {1}, fila);
 		}
+		@Test
+		public void devuelveLaPrimeraFilaDeunSudokuDeOrden2() {
+			int orden =2;
+			Sudoku sudoku = new Sudoku(orden);
+			int [] datos = new int[] {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16};
+			sudoku.cargar(datos);
+			int[] fila = sudoku.getFila(0);
+			assertArrayEquals(new int[] {1,2,3,4}, fila);
+		}
 }		
 
 

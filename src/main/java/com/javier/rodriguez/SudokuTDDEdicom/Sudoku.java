@@ -60,4 +60,21 @@ public class Sudoku {
 	public int getTotalCasillasPorFila() {
 		return cuadrado(this.orden);
 	}
+	
+	public int getTotalCasillasPorColumna() {
+		return cuadrado(this.orden);
+	}
+	
+	public int[] getColumna(int i) {
+		int k= this.getTotalCasillasPorColumna();
+		int [] columna = new int [k];
+		for(int j=0; j<k; j++)
+		{
+			columna[j]=this.datos[i];
+			i=i+k;
+		}
+		
+		
+		return columna;
+	}
 }

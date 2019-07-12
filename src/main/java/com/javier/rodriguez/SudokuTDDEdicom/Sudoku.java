@@ -30,7 +30,7 @@ public class Sudoku {
 	}
 	
 	public int getTotalCuadrados() {
-		return 1;
+		return cuadrado(this.orden);
 	}
 	
 }

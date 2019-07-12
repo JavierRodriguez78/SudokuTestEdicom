@@ -35,6 +35,14 @@ public class SudokuTEst {
 			int totalCasillas = sudoku.getTotalCasillas();
 			assertEquals(16, totalCasillas);
 		}
+		
+		@Test
+		public void unSudokuDeOrden3TieneEnTotal81Casillas() {
+			int orden = 3;
+			Sudoku sudoku = new Sudoku(orden);
+			int totalCasillas = sudoku.getTotalCasillas();
+			assertEquals(81, totalCasillas);
+		}
 
 }		
 

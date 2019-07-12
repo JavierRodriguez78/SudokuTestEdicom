@@ -22,7 +22,11 @@ public class Sudoku {
 	}
 	
 	public int getTotalCasillas() {
-		return 1;
+		return cuadrado(cuadrado(this.orden));
+	}
+	
+	public int cuadrado(int n) {
+		return n * n;
 	}
 	
 }

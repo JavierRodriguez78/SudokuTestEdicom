@@ -30,7 +30,7 @@ public class SudokuTEst {
 	 */
 		@Test
 		public void unSudokuDeOrden2TieneEnTotal16Casillas() {
-			int orden = 1;
+			int orden = 2;
 			Sudoku sudoku = new Sudoku(orden);
 			int totalCasillas = sudoku.getTotalCasillas();
 			assertEquals(16, totalCasillas);

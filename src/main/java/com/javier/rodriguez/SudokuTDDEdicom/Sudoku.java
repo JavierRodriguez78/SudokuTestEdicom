@@ -1,11 +1,14 @@
 package com.javier.rodriguez.SudokuTDDEdicom;
 
+import java.util.Arrays;
+
 public class Sudoku {
 
 	
 
 
 	private final int orden;
+	private int[] datos;
 	
 	
 	public Sudoku(int orden) {
@@ -33,4 +36,13 @@ public class Sudoku {
 		return cuadrado(this.orden);
 	}
 	
+	public void cargar(int [] datos)
+	{
+		this.datos = datos;
+	}
+	
+	public int[] getFila(int i)
+	{
+		return Arrays.copyOfRange(this.datos, 0, 1);
+	}
 }

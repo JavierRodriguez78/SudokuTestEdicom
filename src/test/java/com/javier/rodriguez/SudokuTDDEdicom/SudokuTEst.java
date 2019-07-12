@@ -44,6 +44,13 @@ public class SudokuTEst {
 			assertEquals(81, totalCasillas);
 		}
 
+		@Test
+		public void unSudokuDeOrden1TieneEnTotal1() {
+			int orden = 1;
+			Sudoku sudoku = new Sudoku(orden);
+			int totalCuadrados = sudoku.getTotalCuadrados();
+			assertEquals(1, totalCuadrados);
+		}
 }		
 
 

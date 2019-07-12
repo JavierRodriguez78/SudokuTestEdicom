@@ -51,6 +51,15 @@ public class SudokuTEst {
 			int totalCuadrados = sudoku.getTotalCuadrados();
 			assertEquals(1, totalCuadrados);
 		}
+		
+
+		@Test
+		public void unSudokuDeOrden2TieneEnTotal4Cuadrados() {
+			int orden = 2;
+			Sudoku sudoku = new Sudoku(orden);
+			int totalCuadrados = sudoku.getTotalCuadrados();
+			assertEquals(4, totalCuadrados);
+		}
 }		
 
 

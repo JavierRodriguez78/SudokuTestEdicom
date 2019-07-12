@@ -43,6 +43,21 @@ public class Sudoku {
 	
 	public int[] getFila(int i)
 	{
-		return Arrays.copyOfRange(this.datos, 0, 1);
+		return Arrays.copyOfRange(this.datos, this.getPosicionInicialFila(i), 
+				this.getPosicionFinalFila(i));
+	}
+	
+	int getPosicionInicialFila(int i)
+	{
+		return i*this.getTotalCasillasPorFila();
+	}
+	
+	int getPosicionFinalFila(int i)
+	{
+		return this.getPosicionInicialFila(i)+this.getTotalCasillasPorFila();
+	}
+	
+	public int getTotalCasillasPorFila() {
+		return cuadrado(this.orden);
 	}
 }

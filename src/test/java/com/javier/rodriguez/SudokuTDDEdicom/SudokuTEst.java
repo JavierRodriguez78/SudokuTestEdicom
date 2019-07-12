@@ -60,6 +60,16 @@ public class SudokuTEst {
 			int totalCuadrados = sudoku.getTotalCuadrados();
 			assertEquals(4, totalCuadrados);
 		}
+		
+		@Test
+		public void devuelveLaPrimeraFilaDeunSudokuDeOrden1() {
+			int orden =1;
+			Sudoku sudoku = new Sudoku(orden);
+			int [] datos = new int[] {1};
+			sudoku.cargar(datos);
+			int[] fila = sudoku.getFila(0);
+			assertArrayEquals(new int[] {1}, fila);
+		}
 }		
 
 

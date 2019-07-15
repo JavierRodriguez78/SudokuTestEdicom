@@ -65,6 +65,10 @@ public class Sudoku {
 		return cuadrado(this.orden);
 	}
 	
+	public int getTotalCasillasPorCuadrado() {
+		return cuadrado(this.orden);
+	}
+	
 	public int[] getColumna(int i) {
 		int k= this.getTotalCasillasPorColumna();
 		int [] columna = new int [k];
@@ -76,5 +80,23 @@ public class Sudoku {
 		
 		
 		return columna;
+	}
+	
+	public int[] getCuadrado(int i)
+	{
+		int k = this.getTotalCasillasPorCuadrado();
+		int [] cuadrado = new int[k];
+		int offset = i%2 == 0 ? cuadrado(cuadrado(i)): cuadrado(i)+1;
+		for ( int j=0; j<k; j++)
+		{
+			if(j%2 == 0) {
+				i =offset+j*2;
+			} else {
+				i= offset+j*2-1;
+			}
+			cuadrado[j]=this.datos[i];
+			
+		}
+		return cuadrado;
 	}
 }

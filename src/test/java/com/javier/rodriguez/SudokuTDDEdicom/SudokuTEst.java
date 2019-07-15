@@ -161,5 +161,26 @@ public class SudokuTEst {
 		assertEquals(12, indice);
 
 	}
+	
+	/**
+	 * 1 2 3 4
+	 * 3 4 1 2
+	 * 2 1 4 3
+	 * 4 3 2 1  
+	*/
+	
+	@Test
+	public void compruebaUnSudokuCorrectoDeOrden2()
+	{
+		int orden=2;
+		Sudoku sudoku = new Sudoku(orden);
+		int[] datos = new int[] {1,2,3,4,3,4,1,2,2,1,4,3,4,3,2,1};
+		sudoku.cargar(datos);
+		//TODO Implementar método comprobar;
+		//Boolean.
+		//Verfiicar no hay repediso en filas y columnas, o cuadrados.
+		//ComprobarFilas.
+		assertArrayEquals(new int[] { 1,2,3,4}, sudoku.getFila(0));
+	}
 
 }

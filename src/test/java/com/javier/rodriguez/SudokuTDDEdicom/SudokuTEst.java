@@ -201,5 +201,14 @@ public class SudokuTEst {
 		//ComprobarFilas.
 		assertArrayEquals(new int[] { 1,2,3,4}, sudoku.getFila(0));
 	}
+	
+	@Test
+	public void compruebaNumerosRepetidosEnOrden2() {
+		int orden =2;
+		Sudoku sudoku = new Sudoku(orden);
+		assertFalse(sudoku.hayNumerosRepetidos(new int[] {1,2,3,4}));
+		assertTrue(sudoku.hayNumerosRepetidos(new int[] {3,1,3,1}));
+		
+	}
 
 }

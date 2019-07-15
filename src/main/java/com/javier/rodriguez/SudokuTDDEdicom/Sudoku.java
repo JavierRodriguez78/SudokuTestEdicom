@@ -86,7 +86,7 @@ public class Sudoku {
 	{
 		int k = this.getTotalCasillasPorCuadrado();
 		int [] cuadrado = new int[k];
-		int offset = i%2 == 0 ? cuadrado(cuadrado(i)): cuadrado(i)+1;
+		int offset = i%2 == 0 ? cuadrado(i): cuadrado(i)+1;
 		for ( int j=0; j<k; j++)
 		{
 			if(j%2 == 0) {
@@ -113,4 +113,16 @@ public class Sudoku {
 		return false;
 	}
 	
+	public boolean verificar()
+	{
+		for (int i= 0; i < this.getTotalCasillasPorFila(); i++ )
+		{
+			if (this.hayNumerosRepetidos(this.getFila(i))) return false;
+			if (this.hayNumerosRepetidos(this.getColumna(i))) return false;
+			if (this.hayNumerosRepetidos(this.getCuadrado(i))) return false;
+		}
+		
+		return true;
+	}
+
 }

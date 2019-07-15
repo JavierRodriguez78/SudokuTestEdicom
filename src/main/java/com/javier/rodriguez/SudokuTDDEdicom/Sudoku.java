@@ -99,4 +99,18 @@ public class Sudoku {
 		}
 		return cuadrado;
 	}
+	
+	public boolean hayNumerosRepetidos(int[] numeros)
+	{
+		Arrays.sort(numeros);
+		for (int i= 0; i<numeros.length-1; i++) {
+			
+			if(numeros[i]>=numeros[i+1]) {
+				return true;
+			}
+		}
+		
+		return false;
+	}
+	
 }

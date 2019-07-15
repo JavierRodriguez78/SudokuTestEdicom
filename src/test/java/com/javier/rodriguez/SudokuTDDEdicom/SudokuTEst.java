@@ -162,6 +162,25 @@ public class SudokuTEst {
 
 	}
 	
+	
+	/**
+	 * 1	2	3	4
+	 * 5	6	7	8
+	 * 9	10	11	12
+	 * 13	14	15	16
+	 */
+	
+	@Test
+	public void devuelveElPrimerCuadradorDeUnSudokuDeOrden2(){
+		int orden =2;
+		Sudoku sudoku = new Sudoku(orden);
+		int[] datos = new int[] {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16};
+		sudoku.cargar(datos);
+		int[] fila= sudoku.getCuadrado(0);
+		assertArrayEquals(new int[] {1,2,5,6}, fila);
+		
+	}
+	
 	/**
 	 * 1 2 3 4
 	 * 3 4 1 2

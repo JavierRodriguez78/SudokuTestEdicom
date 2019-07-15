@@ -200,7 +200,9 @@ public class SudokuTEst {
 		//Boolean.
 		//Verfiicar no hay repediso en filas y columnas, o cuadrados.
 		//ComprobarFilas.
-		assertArrayEquals(new int[] { 1,2,3,4}, sudoku.getFila(0));
+		assertTrue(sudoku.verificar());
+		
+		//assertArrayEquals(new int[] { 1,2,3,4}, sudoku.getFila(0));
 	}
 	
 	@Test
